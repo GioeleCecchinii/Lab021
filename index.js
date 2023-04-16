@@ -3,38 +3,48 @@
 //console.log("ciao Mondo"+ input);
 
 class Macchina {
-    #m_marca = null;
-    #m_modello = null;
-    #m_cavalli = null; 
-    constructor(marca, modello, cavalli) {
-        this.marca = marca;
-        this.modello = modello;
-        this.cavalli = cavalli;
+    #m_targa = null;
+    #m_carburante = null;
+    #m_matricola = null; 
+    #m_potenza = null;
+    constructor(targa, carburante, matricola, potenza) {
+        this.targa = targa;
+        this.carburante = carburante;
+        this.matricola = matricola;
+        this.potenza = potenza;
     }
-    set marca(nuovaMarca) {
-        this.#m_marca = nuovaMarca;
+    set targa(nuovaTarga) {
+        this.#m_targa = nuovaTarga;
     }
-    get marca() {
-        return this.#m_marca;
+    get targa() {
+        return this.#m_targa;
     }
-    set modello(nuovoModello) {
-        this.#m_modello = nuovoModello;
+    set carburante(nuovoCarburante) {
+        this.#m_carburante = nuovoCarburante;
     }
-    get modello() {
-        return this.#m_modello;
+    get carburante() {
+        return this.#m_carburante;
     }
-    set cavalli(nuoviCavalli) {
-        this.#m_cavalli = nuoviCavalli;
+    set matricola(nuovaMatricola) {
+        this.#m_matricola = nuovaMatricola;
     }
-    get cavalli() {
-        return this.#m_cavalli;
+    get matricola() {
+        return this.#m_matricola;
+    }
+    set potenza(nuovaPotenza) {
+        this.#m_potenza = nuovaPotenza;
+    }
+    get potenza() {
+        return this.#m_potenza;
     }
 }
 const prompt = require("prompt-sync")();
-let marca = prompt("Marca?");
-let modello = prompt("Modello?");
-let cavalli = prompt("Cavalli?");
-let macchina = new Macchina (marca, modello, cavalli);
-console.log("Marca: " + macchina.marca);
-console.log("Modello: " + macchina.modello);
-console.log("Cavalli: " + macchina.cavalli);
+let targa = prompt("targa?");
+let carburante = prompt("carburante?");
+let matricola = prompt("matricola?");
+let potenza = prompt("potenza?");
+let macchina = new Macchina (targa, carburante, matricola, potenza);
+console.log("targa: " + macchina.targa);
+console.log("carburante: " + macchina.modello);
+console.log("matricola: " + macchina.matricola);
+console.log("potenza: " + macchina.potenza);
